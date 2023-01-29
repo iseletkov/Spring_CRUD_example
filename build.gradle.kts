@@ -16,10 +16,15 @@ repositories {
 }
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+	//ORM для обмена данными с СУБД.
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	//Веб-сервер.
+	implementation("org.springframework.boot:spring-boot-starter-web")
+
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+	//Драйвер для подключения к СУБД PostgreSQL
 	runtimeOnly("org.postgresql:postgresql")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
